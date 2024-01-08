@@ -1,0 +1,16 @@
+{
+  "ray": {
+    "sid": "a6d9ca9bbc2d4c1b9e00f3820d4bc62b",
+    "uid": null,
+    "qid": "0a47b3c71aa348ad99df4fdea221e999",
+    "rid": null,
+    "bars": { "default": { "percent": "100", "remaining": "0" } },
+    "messages": [],
+    "status": "COMPLETED",
+    "created_at": "2024-01-08T13:53:12.110117",
+    "updated_at": "2024-01-08T13:53:12.276438",
+    "finished": true
+  },
+  "in": { "text": ["hi"] },
+  "out": { "text": ["Hi, i got here"] }
+}
