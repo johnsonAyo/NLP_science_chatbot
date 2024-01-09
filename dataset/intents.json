@@ -1,0 +1,190 @@
+{
+  "intents": [
+    {
+      "context": "science",
+      "patterns": [
+        "What is photosynthesis?",
+        "Explain the process of photosynthesis",
+
+        "How do plants make food?"
+      ],
+      "responses": [
+        "Photosynthesis is the process by which green plants and some other organisms use sunlight to synthesize foods from carbon dioxide and water. [6] It involves the green pigment chlorophyll and generates oxygen as a byproduct."
+      ],
+      "tag": "photosynthesis"
+    },
+    {
+      "context": "science",
+      "patterns": [
+        "What is the law of gravity?",
+
+        "Explain Newton's law of gravity",
+
+        "How does gravity work?"
+      ],
+      "responses": [
+        "The law of gravity, also known as Newton's law of universal gravitation, states that every particle attracts every other particle in the universe with a force that is directly proportional to the product of their masses and inversely proportional to the square of the distance between their centers."
+      ],
+      "tag": "gravity"
+    },
+    {
+      "context": "science",
+      "patterns": [
+        "What are the states of matter?",
+
+        "List the states of matter",
+
+        "Explain solid, liquid, and gas"
+      ],
+      "responses": [
+        "The states of matter are the distinct forms that different phases of matter take on. [15] The four fundamental states are solid, liquid, gas, and plasma. [16] Solids have a fixed shape and volume, liquids have a fixed volume but can change shape, and gases can change both shape and volume."
+      ],
+      "tag": "states_of_matter"
+    },
+    {
+      "context": "science",
+      "patterns": [
+        "What is the periodic table?",
+
+        "Describe the periodic table",
+
+        "Explain the elements in the periodic table"
+      ],
+      "responses": [
+        "The periodic table is a tabular arrangement of the chemical elements, organized on the basis of their atomic numbers, electron configurations, and recurring chemical properties. [21] Elements are presented in order of increasing atomic number."
+      ],
+      "tag": "periodic_table"
+    },
+    {
+      "context": "science",
+      "patterns": ["Hello", "Hi there", "Good morning", "What's up"],
+      "responses": ["Hey!", "Hello", "Hi!", "Good morning!"],
+      "tag": "hello"
+    },
+    {
+      "context": ["out of training range"],
+      "patterns": [],
+      "responses": [
+        "Sorry, can't understand you",
+        "Please give me more info",
+        "Not sure I understand"
+      ],
+      "tag": "no answer"
+    },
+    {
+      "context": "",
+      "patterns": ["What is your job", "What is your work"],
+      "responses": [
+        "My job is to make you feel like everything is okay.",
+        "I work to serve you as well as possible"
+      ],
+      "tag": "job"
+    },
+    {
+      "context": "",
+      "patterns": ["What is your age", "How old are you", "When were you born"],
+      "responses": ["I was born in 2021"],
+      "tag": "age"
+    },
+    {
+      "context": "",
+      "patterns": ["Hello", "Hi", "Howdy"],
+      "responses": [
+        "Hi, What can i do for you today",
+        "Hello, How ae you doing",
+        "Welcome"
+      ],
+      "tag": "feeling"
+    },
+    {
+      "context": "",
+      "patterns": ["How are you today", "How are you"],
+      "responses": [
+        "I am feeling good, you?",
+        "Very good and you?",
+        "Actually, I'm okay and you?"
+      ],
+      "tag": "feeling"
+    },
+    {
+      "context": "feeling",
+      "patterns": [
+        "I am good too",
+        "I feel fine",
+        "Good !",
+        "Fine",
+        "I am good",
+        "I am great",
+        "great"
+      ],
+      "responses": ["That is perfect!", "So, everything's okay!"],
+      "tag": "good"
+    },
+    {
+      "context": "feeling",
+      "patterns": ["I am feeling bad", "No I am sad", "No"],
+      "responses": ["I hope you will feel better !"],
+      "tag": "bad"
+    },
+    {
+      "context": "",
+      "patterns": ["What can you do", "What can I ask you", "Can you help me"],
+      "responses": [
+        "I can do a lot of things but here are some of my skills, you can ask me: the capital of a country, its currency and its area. A random number. To calculate a math operation."
+      ],
+      "tag": "actions"
+    },
+    {
+      "context": "",
+      "patterns": ["Are you a girl", "You are a women"],
+      "responses": ["Sure, I am a women"],
+      "tag": "women"
+    },
+    {
+      "context": "",
+      "patterns": ["Are you a men", "Are you a boy"],
+      "responses": ["No, I am a women"],
+      "tag": "men"
+    },
+    {
+      "context": "",
+      "patterns": ["Thank you", "Thank you very much", "thanks"],
+      "responses": ["I only do my job️", "No problem!"],
+      "tag": "thanks"
+    },
+    {
+      "context": "",
+      "patterns": ["Goodbye", "Good afternoon", "Bye"],
+      "responses": ["Goodbye!", "See you soon!"],
+      "tag": "goodbye"
+    },
+    {
+      "context": "",
+      "patterns": ["Where do you live"],
+      "responses": ["I live in a server located in the US!"],
+      "tag": "city"
+    },
+    {
+      "context": "",
+      "patterns": ["What are you doing"],
+      "responses": ["Actually, I'm chatting with somebody"],
+      "tag": "action"
+    },
+    {
+      "context": "",
+      "patterns": [
+        "Can you wait 2 minutes",
+        "Please wait",
+        "Wait 2 secs please"
+      ],
+      "responses": ["Sure! I wait."],
+      "tag": "wait"
+    },
+    {
+      "context": "",
+      "patterns": ["Are you still there?", "Are you here?"],
+      "responses": ["Of course! Always at your service."],
+      "tag": "still there"
+    }
+  ]
+}
