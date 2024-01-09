@@ -1,14 +1,43 @@
-# AI Junior Developer Test
+# NLP Chat Bot Trained on science-related Questions
 
-Welcome! You’ve stepped into the arena – now show us what you’ve got!
+API service
 
-## Mission
+## Deployment Options
 
-You're not just fiddling with code here; you're architecting the future. Your battleground? An AI app framework crying out for a brain.
+The application can be executed in two different ways:
 
-Your task: Forge an 💬NLP chatbot that doesn’t just answer, but masters science-related questions.
 
-Immerse yourself in the main.py file. Your battlefield is the execute function. Time to unleash your genius:
+- Download the needed packages by running `pip install -r requirements.txt`
+- locally by running the `start.sh`
+- Go to `http://localhost:5500/`.
+- on in a docker container using `Dockerfile`
+
+## API Docs
+
+There is an automatically generated API documentation when the server is running. the API can be viewed at `<your_env_url>:<port>/swagger-ui`. For example, if you are running it locally you can view the API docs at `[http://localhost:5000/swagger-ui](http://localhost:5500/swagger-ui/)`
+
+## Chat Bot Brain Setup
+
+Important components of the setup
+1. Training Data (Science Questions(features) and answers(label))
+2. NLTK Package
+3. Tensorflow
+4. Numpy
+
+Important Concepts in the Setup
+1. Neural Network
+2. Bag-of-Words Model
+3. Lemmatization
+
+
+## Background 
+The project involves a dataset related to science. This dataset is imported into the system. Then a process known as 'feature engineering' is carried out, where important pieces of information (features) and their corresponding labels are extracted from the dataset.
+'Lemmatization' is performed on the data using a tool called NLTK. This is a process where different forms of a word are converted into its base form, such as 'running', 'runs', and 'ran' all becoming 'run'. This step aids in standardizing the data.
+The text data is then converted into numbers, a necessary step because the machine learning model, a Neural Network, can only process numerical data.
+Further input preprocessing is done using a function called 'clean_text'. This involves removing unnecessary elements from the text like punctuation and extra spaces. A method called 'bag of words' is also used to represent the text data in a way that's suitable for machine learning.
+Once these steps are completed, the data is ready to be used by the Neural Network model. This model is trained using an optimization method called 'Adam'. The model takes the processed data and makes predictions.
+Finally, a function called 'get_response' is used to interpret the model's predictions and provide a meaningful output.
+Below is a Python function used in the project:
 
 ```python
 ############################################################
@@ -17,44 +46,18 @@ Immerse yourself in the main.py file. Your battlefield is the execute function. 
 def execute(request: SimpleText, ray: Ray, state: State) -> SimpleText:
     output = []
     for text in request.text:
-        # TODO Add code here
-        response = 'Hello!' <<-- Here you add the magic
+        intents = pred_class(text, words, classes)
+        response = get_response(intents, data)
         output.append(response)
 
     return SchemaUtil.create(SimpleText(), dict(text=output))
 ```
 
-## Ground Rules
+This function, named 'execute', takes in a request, processes each piece of text in the request, makes predictions, gets responses based on these predictions, and returns the responses
 
-Step up with any arsenal (read: libraries or packages) you believe in, but remember:
 
-- 👎 External services like chatGPT are off-limits. Stand on your own.
-- 👎 Plagiarism is for the weak. Forge your own path.
-- 👎 A broken app equals failure. Non-negotiable.
+## Future Improvement 
+Data Expansion and Quality: a model is only as good as the data it's been trained on. The model's performance is directly tied to the quality and diversity of the training data.
+Contextual Understanding: The model can be enhanced to understand better and interpret various contexts, leading to more informed and accurate predictions.
+Bias Reduction: Reinforcement Learning from human feedback can be integrated into the training process to detect and correct biases, ensuring the model's decisions are more equitable.
 
-## Deployment Options
-
-The application can be executed in two different ways:
-
-- locally by running the `start.sh`
-- on in a docker container using `Dockerfile`
-
-## Proving Your Mettle
-
-- Submit your masterpiece on GitHub. We want the link within **1 week, not a second more**.
-- Go the extra mile and include a video where you walk us through your solution, showcasing
-  it in live action.
-- We want to see not just what you've created but also how you envisioned and executed it
-
-## This Is It
-
-We're not just evaluating a project; we're judging your potential to revolutionize our
-landscape. A half-baked app won’t cut it.
-
-We're zeroing in on:
-
-- 👍 Exceptional documentation.
-- 👍 Code that speaks volumes.
-- 👍 Inventiveness that dazzles.
-- 👍 A problem-solving beast.
-- 👍 Unwavering adherence to the brief
