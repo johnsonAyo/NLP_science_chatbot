@@ -14,7 +14,7 @@ The application can be executed in two different ways:
 
 ## API Docs
 
-There is an automatically generated API documentation when the server is running. the API can be viewed at `<your_env_url>:<port>/swagger-ui`. For example, if you are running it locally you can view the API docs at `http://localhost:5000/swagger-ui]`
+There is an automatically generated API documentation when the server is running. the API can be viewed at `<your_env_url>:<port>/swagger-ui`. For example, if you are running it locally you can view the API docs at `http://localhost:5000/swagger-ui`
 
 ## Chat Bot Brain Setup
 
