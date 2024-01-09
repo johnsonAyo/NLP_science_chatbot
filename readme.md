@@ -4,6 +4,7 @@
 
 ## Deployment Options
 - Download the needed packages by running `pip install -r requirements.txt`
+- Train the model locally by running the `python brain.py`
   
 
 The application can be executed in two different ways:
