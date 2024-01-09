@@ -1,13 +1,15 @@
 # NLP Chat Bot Trained on science-related Questions
 
-API service
+## API service
 
-## Deployment Options
+# Deployment Options
 - Download the needed packages by running `pip install -r requirements.txt`
+  
 
 The application can be executed in two different ways:
 - locally by running the `start.sh`
 - on in a docker container using `Dockerfile`
+
 
 ## API Docs
 There is an automatically generated API documentation when the server is running. the API can be viewed at `<your_env_url>:<port>/swagger-ui`. For example, if you are running it locally you can view the API docs at `http://localhost:5000/swagger-ui`
