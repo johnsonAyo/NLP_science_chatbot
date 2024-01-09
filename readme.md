@@ -1,8 +1,8 @@
-# NLP Chat Bot Trained on science-related Questions
+## NLP Chat Bot Trained on science-related Questions
 
-## API service
+# API service
 
-# Deployment Options
+## Deployment Options
 - Download the needed packages by running `pip install -r requirements.txt`
   
 
