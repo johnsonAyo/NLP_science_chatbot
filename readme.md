@@ -3,17 +3,13 @@
 API service
 
 ## Deployment Options
+- Download the needed packages by running `pip install -r requirements.txt`
 
 The application can be executed in two different ways:
-
-
-- Download the needed packages by running `pip install -r requirements.txt`
 - locally by running the `start.sh`
-- Go to `http://localhost:5500/`.
 - on in a docker container using `Dockerfile`
 
 ## API Docs
-
 There is an automatically generated API documentation when the server is running. the API can be viewed at `<your_env_url>:<port>/swagger-ui`. For example, if you are running it locally you can view the API docs at `http://localhost:5000/swagger-ui`
 
 ## Chat Bot Brain Setup
