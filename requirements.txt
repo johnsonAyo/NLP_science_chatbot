@@ -1,0 +1,5 @@
+nltk
+numpy
+tensorflow
+tensorflow-keras
+openfabric-pysdk

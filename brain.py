@@ -99,13 +99,19 @@ def bag_of_words(text, vocab):
 
 def pred_class(text, vocab, labels): 
   bow = bag_of_words(text, vocab)
-  result = model.predict(np.array([bow]))[0] #Extracting probabilities
+  result = model.predict(np.array([bow]))[0]
+
+  #Extracting probabilities
   thresh = 0.5
   y_pred = [[indx, res] for indx, res in enumerate(result) if res > thresh]
-  y_pred.sort(key=lambda x: x[1], reverse=True) #Sorting by values of probability in decreasing order
+
+  #Sorting by values of probability in decreasing order
+  y_pred.sort(key=lambda x: x[1], reverse=True)
   return_list = []
   for r in y_pred:
-    return_list.append(labels[r[0]]) #Contains labels(tags) for highest probability 
+    return_list.append(labels[r[0]])
+
+  #Contains labels(tags) for highest probability 
   return return_list
 
 def get_response(intents_list, intents_json): 
